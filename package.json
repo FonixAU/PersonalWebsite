@@ -1,0 +1,32 @@
+{
+  "name": "folio",
+  "version": "1.0.0",
+  "description": "Takuya's website",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Takuya Matsuyama<hi@craftz.dog>",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/react": "^2.6.1",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "fontsource-m-plus-rounded-1c": "^4.0.0",
+    "framer-motion": "^10.12.9",
+    "next": "^13.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "three": "^0.154.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-config-next": "^13.4.1",
+    "prettier": "2.8.8"
+  }
+}

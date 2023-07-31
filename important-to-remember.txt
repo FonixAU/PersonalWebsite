@@ -1,0 +1,6 @@
+Website base
+https://www.youtube.com/watch?v=bSMZgXzC9  AA
+This has the chakra theme info
+https://chakra-ui.com/docs/styled-system/theme
+This will fix the legacy link issue
+npx @next/codemod new-link . --force
