@@ -1,7 +1,8 @@
-import { Container, Heading, SimpleGrid, Divider, Box, Flex, ChakraProvider} from '@chakra-ui/react'
-import Section from '../components/section'
+import { Container, Heading} from '@chakra-ui/react'
+// , SimpleGrid, Divider, Box, Flex, ChakraProvider
+// import Section from '../components/section'
 import Layout from '../components/layouts/article'
-import StackGrid from '../components/layouts/stackgrid'
+// import StackGrid from '../components/layouts/stackgrid'
 const Experiences = () => {
     return(
         <Layout>
