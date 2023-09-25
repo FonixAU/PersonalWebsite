@@ -10,6 +10,11 @@ const Experiences = () => {
             <Heading as="h3" fontSize={20} mb={4}>
                 Experience
             </Heading>
+        </Container>
+        </Layout>
+    )
+}
+export default Experiences
 //             {/* <SimpleGrid columns={[1,1,2]} gap={6}>
 //             <Section>
 //                 <StackGrid/>
@@ -18,8 +23,3 @@ const Experiences = () => {
 //             <Section>
 //                 <Divider/>
 //             </Section> */}
-        </Container>
-        </Layout>
-    )
-}
-export default Experiences
