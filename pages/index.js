@@ -26,12 +26,8 @@ import {
 const Page = () =>{
     return (
         <Layout>
-        <Container>
-            <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} mt={1} align="center">
-                Hello, I&apos;m a graduate developer based in Melbourne
-            </Box>
-            
-            <Box display={{ md:'flex'}} >
+        <Container>            
+            <Box display={{ md:'flex'}} mt={3} >
                 <Box flexGrow = {1}>
                     <Heading as="h2" variant="page-title">
                         Felipe Ortiz
@@ -108,7 +104,7 @@ const Page = () =>{
             Find me here
             </Heading>
             <SimpleGrid columns={[1,2,2]} gap={6}> 
-                <Link href="https://linkedin.com/fmolinariortiz" target="_blank">
+                <Link href="https://www.linkedin.com/in/felipemolinariortiz/" target="_blank">
                     <Button variant="ghost" 
                     colorScheme="teal" 
                     leftIcon={<Icon as={IoLogoLinkedin}/>}>
@@ -129,3 +125,7 @@ const Page = () =>{
     )
 }
 export default Page
+
+{/* <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} mt={1} align="center">
+Message Banner Template
+</Box> */}

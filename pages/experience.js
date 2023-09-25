@@ -7,7 +7,7 @@ const Experiences = () => {
     return(
         <Layout>
         <Container>
-            <Heading as="h3" fontSize={20} mb={4}>
+            <Heading as="h3" fontSize={20} mb={4} mt={4}>
                 Experience
             </Heading>
         </Container>
