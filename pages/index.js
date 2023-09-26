@@ -7,10 +7,10 @@ import {
     Image, 
     Link,
     Icon,
-    SimpleGrid,
+    SimpleGrid
     // List,
     // ListItem,
-    useColorModeValue 
+    //useColorModeValue 
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
