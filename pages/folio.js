@@ -2,7 +2,6 @@ import { Container, Heading, SimpleGrid, Divider} from '@chakra-ui/react'
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
 import { WorkGridItem } from '../components/grid-item'
-
 import zaniteeImage from '../public/images/folio/zaniteelogo.png'
 const Works = () => {
     return(
