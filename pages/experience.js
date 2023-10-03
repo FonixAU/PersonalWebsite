@@ -5,7 +5,10 @@ import { ExperienceGridItem } from '../components/grid-item'
 import LinfoxImage from '../public/images/experience/Linfox_logo.svg.png'
 import DTLImage from '../public/images/experience/diversetechlab.png'
 import HoneycombGrid from '../components/layouts/honeycombGrid'
-import JSLogo from '../public/images/experience/javascript_logo.jpg'
+import JSLogo from '../public/images/experience/Stack/javascript_logo.jpg'
+import VueLogo from '../public/images/experience/Stack/vuejs_logo.png'
+import SAPLogo from '../public/images/experience/Stack/SAP_logo.png'
+
 const Experiences = () => {
     return(
         <Layout>
@@ -38,8 +41,8 @@ const Experiences = () => {
 }
 const honeycombsData = [
     {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: VueLogo, alt:"VueJS Logo"},
+    {imageUrl: SAPLogo, alt:"SAP Logo"},
     {imageUrl: JSLogo, alt:"JS Logo"},
     {imageUrl: JSLogo, alt:"JS Logo"},
     {imageUrl: JSLogo, alt:"JS Logo"},

@@ -36,7 +36,7 @@ const Logo = () => {
                             fontWeight="bold"
                             ml={3}
                             >
-                                Felipe Ortiz
+                                Felipe Molinari Ortiz
                             </Text>
                 </LogoBox>
 
