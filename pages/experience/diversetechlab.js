@@ -23,7 +23,7 @@ const DiverseTechLab = () => {
                 <ListItem mt={3}>
                 <P>
                 While I had the pleasure of working there, I prototyped new projects, ran client meetings, created
-                and managed databases and endpoints, created API's and integrated others, and worked on the front-end
+                and managed databases and endpoints, created API&apos;s and integrated others, and worked on the front-end
                 of secure, responsive and dynamic web based applications.
                 </P>
                 </ListItem>
