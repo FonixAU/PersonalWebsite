@@ -10,12 +10,12 @@ const Experiences = () => {
     return(
         <Layout>
         <Container>
-            <Heading as="h3" fontSize={20} mb={4} mt={4}>
+            <Heading as="h3" fontSize={20} mb={8} mt={4}>
                 Experience
             </Heading>
             <Section>
-                <HoneycombGrid honeycombs={honeycombsData} hexagonWidth="150px" hexagonHeight="173px" />
-                <Divider/>
+                <HoneycombGrid honeycombs={honeycombsData} hexagonWidth="50px" hexagonHeight="57px" />
+                <Divider mt={8}/>
                 <SimpleGrid columns={[1,1,2]} gap={6} mt={4}>
             <Section>
             <AspectRatio maxW='560px' ratio={4 / 3}>
@@ -37,6 +37,19 @@ const Experiences = () => {
     )
 }
 const honeycombsData = [
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"JS Logo"},
     {imageUrl: JSLogo, alt:"JS Logo"},
     {imageUrl: JSLogo, alt:"JS Logo"},
     {imageUrl: JSLogo, alt:"JS Logo"}
