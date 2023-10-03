@@ -37,6 +37,22 @@ export const WorkGridItem = ({ children, id, title, thumbnail}) => (
         </NextLink>
     </Box>
 )
+export const ExperienceGridItem = ({ children, id, title, thumbnail}) => (
+    <Box w="100%" align="center">
+        <NextLink href={`/experience/${id}`} legacyBehavior>
+        <LinkBox cursor="pointer">
+        <Image src={thumbnail} alt={title} className="grid-item-thumbnail"
+        placeholder="blur"/>
+        <LinkOverlay href={`/experience/${id}`}>
+            <Text mt={2} fontSize={20} >
+                {title}
+            </Text>
+        </LinkOverlay>
+        <Text fontSize={14}>{children}</Text>
+        </LinkBox>
+        </NextLink>
+    </Box>
+)
 
 export const GridItemStyle = () => (
     <Global styles={`
