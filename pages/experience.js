@@ -4,6 +4,8 @@ import Layout from '../components/layouts/article'
 import { ExperienceGridItem } from '../components/grid-item'
 import LinfoxImage from '../public/images/experience/Linfox_logo.svg.png'
 import DTLImage from '../public/images/experience/diversetechlab.png'
+import Honeycomb from '../components/honeycomb'
+import JSLogo from '../public/images/experience/javascript_logo.jpg'
 const Experiences = () => {
     return(
         <Layout>
@@ -12,6 +14,12 @@ const Experiences = () => {
                 Experience
             </Heading>
             <Section>
+                <SimpleGrid>
+                    <Honeycomb imageUrl={JSLogo} alt={"JS Logo"}/>
+                    <Honeycomb imageUrl={JSLogo} alt={"JS Logo"}/>
+                    <Honeycomb imageUrl={JSLogo} alt={"JS Logo"}/>
+            
+                </SimpleGrid>
                 <Divider/>
                 <SimpleGrid columns={[1,1,2]} gap={6} mt={4}>
             <Section>
