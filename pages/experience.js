@@ -17,7 +17,7 @@ const Experiences = () => {
                 Experience
             </Heading>
             <Section>
-                <HoneycombGrid honeycombs={honeycombsData} hexagonWidth="10%" hexagonHeight="115%" />
+                <HoneycombGrid honeycombs={honeycombsData} hexagonWidth="12%" hexagonHeight="115%" />
                 <Divider mt={8}/>
                 <SimpleGrid columns={[1,1,2]} gap={6} mt={4}>
             <Section>
