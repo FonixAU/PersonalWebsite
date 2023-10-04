@@ -17,7 +17,7 @@ const Experiences = () => {
                 Experience
             </Heading>
             <Section>
-                <HoneycombGrid honeycombs={honeycombsData} hexagonWidth="50px" hexagonHeight="57px" />
+                <HoneycombGrid honeycombs={honeycombsData} hexagonWidth="10%" hexagonHeight="115%" />
                 <Divider mt={8}/>
                 <SimpleGrid columns={[1,1,2]} gap={6} mt={4}>
             <Section>
@@ -40,7 +40,7 @@ const Experiences = () => {
     )
 }
 const honeycombsData = [
-    {imageUrl: JSLogo, alt:"JS Logo"},
+    {imageUrl: JSLogo, alt:"Javascript"},
     {imageUrl: VueLogo, alt:"VueJS Logo"},
     {imageUrl: SAPLogo, alt:"SAP Logo"},
     {imageUrl: JSLogo, alt:"JS Logo"},

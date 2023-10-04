@@ -25,7 +25,7 @@ const Honeycomb = ({ imageUrl, alt, width, height }) => {
   };
 
   // Conditionally apply the 'javascript' class if 'alt' has a specific value
-  if (alt === "JS Logo") {
+  if (alt === "Javascript" || alt === "JS Logo") {
     return (
       <div style={hexagonStyles.javascript}>
         <Image src={imageUrl} alt={alt}/>
