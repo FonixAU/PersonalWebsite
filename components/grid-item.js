@@ -42,7 +42,7 @@ export const ExperienceGridItem = ({ children, id, title, thumbnail}) => (
         <NextLink href={`/experience/${id}`} legacyBehavior>
         <LinkBox cursor="pointer">
         <Image src={thumbnail} alt={title} className="grid-item-thumbnail"
-        placeholder="blur" height={120} />
+        placeholder="blur" height={117} />
         <LinkOverlay href={`/experience/${id}`}>
             <Text mt={2} fontSize={20} >
                 {title}

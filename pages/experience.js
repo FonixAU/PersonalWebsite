@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid, Divider, AspectRatio } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
 import { ExperienceGridItem } from '../components/grid-item'
@@ -21,11 +21,9 @@ const Experiences = () => {
                 <Divider mt={8}/>
                 <SimpleGrid columns={[1,1,2]} gap={6} mt={4}>
             <Section>
-            <AspectRatio maxW='560px' ratio={4 / 3}>
                 <ExperienceGridItem id="diversetechlab" title="Diverse Tech Lab" thumbnail={DTLImage} height={50}>
                     Full-Stack Development Intern
                 </ExperienceGridItem>
-            </AspectRatio>
             </Section>
             <Section>
                 <ExperienceGridItem id="linfox" title="Linfox" thumbnail={LinfoxImage}>
