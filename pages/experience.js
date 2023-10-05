@@ -5,9 +5,9 @@ import { ExperienceGridItem } from '../components/grid-item'
 import LinfoxImage from '../public/images/experience/Linfox_logo.svg.png'
 import DTLImage from '../public/images/experience/diversetechlab.png'
 import HoneycombGrid from '../components/layouts/honeycombGrid'
-import JSLogo from '../public/images/experience/stack/javascript_logo.jpg'
-import VueLogo from '../public/images/experience/stack/vuejs_logo.png'
-import SAPLogo from '../public/images/experience/stack/SAP_logo.png'
+// import JSLogo from '../public/images/experience/stack/javascript_logo.jpg'
+// import VueLogo from '../public/images/experience/stack/vuejs_logo.png'
+// import SAPLogo from '../public/images/experience/stack/SAP_logo.png'
 
 const Experiences = () => {
     return(
@@ -17,7 +17,7 @@ const Experiences = () => {
                 Experience
             </Heading>
             <Section>
-                <HoneycombGrid honeycombs={honeycombsData} hexagonWidth="12%" hexagonHeight="115%" />
+                <HoneycombGrid honeycombs={honeycombs} hexagonWidth="12%" hexagonHeight="115%" />
                 <Divider mt={8}/>
                 <SimpleGrid columns={[1,1,2]} gap={6} mt={4}>
             <Section>
@@ -37,23 +37,31 @@ const Experiences = () => {
         </Layout>
     )
 }
-const honeycombsData = [
-    {imageUrl: JSLogo, alt:"Javascript"},
-    {imageUrl: VueLogo, alt:"VueJS Logo"},
-    {imageUrl: SAPLogo, alt:"SAP Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"},
-    {imageUrl: JSLogo, alt:"JS Logo"}
-]
+
+export async function getServerSideProps() {
+    const response = await fetch('http://localhost:3000/api/honeycombs'); // Update the URL
+    const { honeycombs } = await response.json();
+  
+    return {
+      props: { honeycombs }};
+  }
+// const honeycombsData = [
+//     {imageUrl: JSLogo, alt:"Javascript"},
+//     {imageUrl: VueLogo, alt:"VueJS Logo"},
+//     {imageUrl: SAPLogo, alt:"SAP Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"},
+//     {imageUrl: JSLogo, alt:"JS Logo"}
+// ]
 export default Experiences
 
