@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import {Box, Text, LinkBox, LinkOverlay} from '@chakra-ui/react'
+import {Box, Text, LinkBox, LinkOverlay, AspectRatio } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail}) => (
@@ -42,7 +42,7 @@ export const ExperienceGridItem = ({ children, id, title, thumbnail}) => (
         <NextLink href={`/experience/${id}`} legacyBehavior>
         <LinkBox cursor="pointer">
         <Image src={thumbnail} alt={title} className="grid-item-thumbnail"
-        placeholder="blur"/>
+        placeholder="blur" height={120} />
         <LinkOverlay href={`/experience/${id}`}>
             <Text mt={2} fontSize={20} >
                 {title}
