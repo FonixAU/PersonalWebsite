@@ -38,13 +38,16 @@ const Experiences = () => {
     )
 }
 
-export async function getServerSideProps() {
-    const response = await fetch('http://localhost:3000/api/honeycombs'); // Update the URL
-    const { honeycombs } = await response.json();
+export async function getStaticProps() {
+    const res = await fetch('http://localhost:3000/api/honeycombs');
+    const { honeycombs } = await res.json();
   
     return {
-      props: { honeycombs }};
-  }
+      props: {
+        honeycombs,
+      },
+    };
+}
 // const honeycombsData = [
 //     {imageUrl: JSLogo, alt:"Javascript"},
 //     {imageUrl: VueLogo, alt:"VueJS Logo"},
