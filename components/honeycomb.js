@@ -12,24 +12,32 @@ const Honeycomb = ({ imageUrl, alt, width, height }) => {
       position: 'relative',
       margin: '0 10px',
       clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-      display: 'flex',
-      alignItems: 'center', // Center vertically
-      justifyContent: 'center' // Center horizontally
-    },
-    javascript: {
-      width: width || '60px',
-      height: height || '60px',
+      javascript: {
+        width: '100px',
+      height: '115px', // Adjust as needed
       position: 'relative',
-      margin: '0 10px',
-      clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+      margin: '0 10px', // Spacing between hexagons
+      clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+        backgroundColor:"#f0db4f"
+      },
+    },
+    img: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover', // Adjust to control how the image fits within the hexagon
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      zIndex: '1',
     },
   };
-  var colorThief = new ColorThief();
-    return (
-      <div style={hexagonStyles.hexagon} id='hexagon'>
-        <Image onLoad={(img)=>{ document.getElementById('hexagon').backgroundColor = "rgb("+ colorThief.getColor(img) + ")" } } src={imageUrl} alt={alt} fill={true} style={{objectFit: "cover"}} id={alt}/>
-      </div>
-    );  
-};
+
+  return (
+
+    <div style={hexagonStyles.hexagon.javascript}>
+    <Image src={imageUrl} alt={alt} />
+    </div>
+      );
+}
 
 export default Honeycomb;
