@@ -30,7 +30,7 @@ const Page = () =>{
             <Box display={{ md:'flex'}} mt={3} >
                 <Box flexGrow = {1}>
                     <Heading as="h2" variant="page-title">
-                        Felipe Ortiz
+                        Felipe Molinari Ortiz
                     </Heading>
                     <p>IT Graduate ( Designer / Developer )</p>
                 </Box>
