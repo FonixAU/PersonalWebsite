@@ -1,6 +1,5 @@
 import React from 'react';
 import Honeycomb from '../honeycomb';
-import { grid } from '@chakra-ui/react';
 
 const HoneycombGrid = () => {
   const gridStyles = {
