@@ -1,43 +1,48 @@
 import React from 'react';
 import Image from 'next/image';
-import ColorThief from 'colorthief'
-import { color } from 'framer-motion';
-
+import { TemplateContext } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 const Honeycomb = ({ imageUrl, alt, width, height }) => {
-    const hexagonStyles = {
+  const hexagonStyles = {
     hexagon: {
-      width: width || '60px',
-      height: height || '60px',
+      width: width,
+      maxWidth: '60.92px',
+      height: height,
       position: 'relative',
       margin: '0 10px',
+      padding:'5px',
       clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-      javascript: {
-        width: '100px',
-      height: '115px', // Adjust as needed
-      position: 'relative',
-      margin: '0 10px', // Spacing between hexagons
-      clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-        backgroundColor:"#f0db4f"
-      },
+      display: 'flex',
+      alignItems: 'center', // Center vertically
+      justifyContent: 'center', // Center horizontally
+      backgroundColor: '#F7F7F7',
+      objectFit: 'contain'
     },
-    img: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover', // Adjust to control how the image fits within the hexagon
-      position: 'absolute',
-      top: '0',
-      left: '0',
-      zIndex: '1',
+    javascript: {
+      width: width,
+      maxWidth:'60.92px',
+      height: height,
+      position: 'relative',
+      margin: '0 10px',
+      padding: '10px',
+      clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+      backgroundColor: '#f0db4f',
+      display:'hidden'
     },
   };
-
-  return (
-
-    <div style={hexagonStyles.hexagon.javascript}>
-    <Image src={imageUrl} alt={alt} />
-    </div>
-      );
-}
+  // Conditionally apply the 'javascript' class if 'alt' has a specific value
+  if (alt === "javascript") {
+    return ( 
+        <Image src={imageUrl} alt={alt} style={hexagonStyles.javascript} width={100} height={100} />
+      )}
+  else{
+    return (
+      
+        <Image src={imageUrl} alt={alt} width={100} height={100} style={hexagonStyles.hexagon}/>
+      
+    );
+  }
+  
+};
 
 export default Honeycomb;
