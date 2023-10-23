@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { TemplateContext } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 const Honeycomb = ({ imageUrl, alt, width, height }) => {
   const hexagonStyles = {
@@ -26,8 +25,7 @@ const Honeycomb = ({ imageUrl, alt, width, height }) => {
       margin: '0 10px',
       padding: '10px',
       clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-      backgroundColor: '#f0db4f',
-      display:'hidden'
+      backgroundColor: '#f0db4f'
     },
   };
   // Conditionally apply the 'javascript' class if 'alt' has a specific value

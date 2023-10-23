@@ -2,7 +2,7 @@
   "name": "folio",
   "version": "1.0.0",
   "description": "Takuya's website",
-  "browser":{
+  "browser": {
     "fs": false,
     "os": false,
     "path": false
