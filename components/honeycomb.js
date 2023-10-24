@@ -22,7 +22,7 @@ const Honeycomb = ({ imageUrl, alt, width, height }) => {
       height: height,
       position: 'relative',
       margin: '0 10px',
-      padding:'7px',
+      padding:'1.2%',
       clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
       display: 'flex',
       alignItems: 'center', // Center vertically
