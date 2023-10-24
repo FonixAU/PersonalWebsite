@@ -4,7 +4,7 @@ import path from 'path';
 
 export default function handler(req, res) {
   const folderPath = path.join(process.cwd(), 'public/images/experience/stack');
-
+  
   try {
     const files = fs.readdirSync(folderPath);
     const fileData = files.map((fileName) => {
