@@ -6,7 +6,6 @@ import { ExperienceGridItem } from '../components/grid-item'
 import LinfoxImage from '../public/images/experience/Linfox_logo.svg.png'
 import DTLImage from '../public/images/experience/diversetechlab.png'
 import HoneycombGrid from '../components/layouts/honeycombGrid'
-import Noise from '../public/images/noise.svg'
 const Experiences = () => {
     return(
         <Layout>

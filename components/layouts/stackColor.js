@@ -4,7 +4,7 @@ function rgbToHex(rgb) {
     };
 
 export function getStackColour(imagePath) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       const image = new Image();
       image.src = imagePath;
   
