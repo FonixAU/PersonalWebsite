@@ -24,7 +24,7 @@ const LinkItem = ({ href, path, children}) => {
         <NextLink href={href} legacyBehavior>
             <Link
             p={2}
-            bg={active ? 'secondary' : undefined}
+            bg={active ? useColorModeValue('secondaryLight','secondaryDark') : undefined}
             color={active ? '#202023' : inactiveColor}>
                 {children}
             </Link>
