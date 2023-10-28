@@ -106,14 +106,14 @@ const Page = () =>{
             <SimpleGrid columns={[1,2,2]} gap={6}> 
                 <Link href="https://www.linkedin.com/in/felipemolinariortiz/" target="_blank">
                     <Button variant="ghost" 
-                    colorScheme="teal" 
+                    colorScheme="purple" 
                     leftIcon={<Icon as={IoLogoLinkedin}/>}>
                         @fmolinariortiz
                     </Button>
                 </Link>
                 <Link href="https://github.com/FonixAU" target="_blank">
                     <Button variant="ghost" 
-                    colorScheme="teal" 
+                    colorScheme="purple" 
                     leftIcon={<Icon as={IoLogoGithub}/>}>
                         @FonxiAU
                     </Button>
