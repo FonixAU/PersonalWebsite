@@ -52,7 +52,7 @@ export function getStackColour(imagePath) {
       }
 
       // Create a copy of colorCounts to retain the original color palette
-      const colorPaletteCopy = { ...colorCounts };
+      
 
       // Sort the colorCounts object by count in descending order
       const sortedColors = Object.keys(colorCounts).sort(

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { List, ListItem, Center, Heading, Box, Button, Divider, Container, Square, Flex, TagLeftIcon } from '@chakra-ui/react';
+import { List, ListItem, Center, Heading, Box, Button, Divider, Square, Flex} from '@chakra-ui/react';
 import { getStackColour } from './stackColor'; // Import your image color processing module
 
 function ImageUploader() {
