@@ -3,6 +3,7 @@ import Section from '../components/section'
 import Layout from '../components/layouts/article'
 import { WorkGridItem } from '../components/grid-item'
 import zaniteeImage from '../public/images/folio/zaniteelogo.png'
+import npmImage from '../public/images/folio/npm.png'
 const Works = () => {
     return(
         <Layout>
@@ -17,8 +18,8 @@ const Works = () => {
                 </WorkGridItem>
             </Section>
             <Section>
-                <WorkGridItem id="zanitee" title="zanitee" thumbnail={zaniteeImage}>
-                Gift suggestion and cataloguing web application
+                <WorkGridItem id="colorpicker" title="Image Path Color Picker" thumbnail={npmImage}>
+                NPM package for analysing and returning image color distribution
                 </WorkGridItem>
             </Section>
             </SimpleGrid>
