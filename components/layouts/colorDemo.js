@@ -5,7 +5,7 @@ import { getStackColour } from './stackColor'; // Import your image color proces
 function ImageUploader() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageColorData, setImageColorData] = useState(null);
-
+  
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 

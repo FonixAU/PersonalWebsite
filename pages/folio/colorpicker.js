@@ -4,8 +4,10 @@ import { Title, Meta} from '../../components/folioTemplate'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import ColorDemo from '../../components/layouts/colorDemo'
+import { useState } from 'react'
 
 const ImagePathColorPicker = () => {
+
     return (
         <Layout title="ImagePathColorPicker">
             <Container>
@@ -20,7 +22,7 @@ const ImagePathColorPicker = () => {
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Official Release</Meta>
-                        <Link href="https://www.npmjs.com/package/imagepathcolorpicker?activeTab=readme">
+                        <Link href="https://www.npmjs.com/package/imagepathcolorpicker?activeTab=readme" target='_blank'>
                         npmjs.com/package/imagepathcolorpicker<ExternalLinkIcon mx="2px"/>
                         </Link>
                     </ListItem>
