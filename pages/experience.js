@@ -1,11 +1,15 @@
+import dynamic from 'next/dynamic';
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Section from '../components/section'
 import React from 'react'
 import Layout from '../components/layouts/article'
+import LoadingBar from '../components/loadingbar'
 import { ExperienceGridItem } from '../components/grid-item'
 import LinfoxImage from '../public/images/experience/Linfox_logo.svg.png'
 import DTLImage from '../public/images/experience/diversetechlab.png'
-import HoneycombGrid from '../components/layouts/honeycombGrid'
+const HoneycombGrid = dynamic(() => import('../components/layouts/honeycombGrid'), {
+    loading: () => <LoadingBar/>, // You can customize the loading component
+  });
 const Experiences = () => {
     return(
         <Layout>
