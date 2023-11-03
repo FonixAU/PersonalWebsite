@@ -4,7 +4,6 @@ import { Title, Meta} from '../../components/folioTemplate'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import ColorDemo from '../../components/layouts/colorDemo'
-import { useState } from 'react'
 
 const ImagePathColorPicker = () => {
 
