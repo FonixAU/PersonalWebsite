@@ -47,7 +47,7 @@ const Page = () =>{
                 maxWidth="100px"
                 display="inline-block"
                 borderRadius="full"
-                src="/images/something.jpg"
+                src="/images/me.gif"
                 alt="Profile Image"
                 />
                 </Box>

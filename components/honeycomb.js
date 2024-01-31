@@ -1,12 +1,12 @@
 import React, {useEffect , useState} from 'react';
 import Image from 'next/image';
-import { getStackColour } from './layouts/stackColor';
+import { getColorSimple } from './layouts/stackColor';
 const Honeycomb = ({ imageUrl, alt, width, height }) => {
     const [HexColor, setHexColor] = useState('');
 
     useEffect(() => {
       // Call the function with the image path and handle the Promise
-      getStackColour(imageUrl)
+      getColorSimple(imageUrl)
         .then((result) => {
           const hexColor = result.rgb;
           setHexColor(hexColor);
