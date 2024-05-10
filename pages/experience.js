@@ -8,9 +8,6 @@ import DTLImage from '../public/images/experience/diversetechlab.png';
 import HoneycombGrid from '../components/layouts/honeycombGrid';
 
 const Experiences = () => {
-  // Move the useState hook inside the functional component
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
     <Layout>
       <Container>
@@ -18,12 +15,7 @@ const Experiences = () => {
           Experience
         </Heading>
         <Section>
-          {isLoading ? (
-            <Progress size='sm' isIndeterminate />
-          ) : (
-            <HoneycombGrid onload={() => setIsLoading(false)} />
-            )}
-
+        <HoneycombGrid />
           <Divider mt={8} />
           <SimpleGrid columns={[1, 1, 2]} gap={6} mt={4}>
             <Section>
