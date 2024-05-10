@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import NextLink from 'next/link'
 import { 
     Container , 
@@ -24,6 +25,11 @@ import {
 } from 'react-icons/io5'
 
 const Page = () =>{
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpansion = () => {
+    setIsExpanded(!isExpanded);
+  };
     return (
         <Layout>
         <Container>            
@@ -73,9 +79,11 @@ const Page = () =>{
         </Box>
         </Section>
         <Section delay={0.2}>
-            <Heading as="h3" variant="section-title">
+            <Heading as="h3" variant="section-title" onClick={toggleExpansion} style={{ cursor: 'pointer' }}>
                 Biography
             </Heading>
+            {isExpanded &&(
+            <>
             <BioSection>
                 <BioYear>2001</BioYear>
                 Born in Joinville, Brazil.
@@ -98,6 +106,7 @@ const Page = () =>{
             <BioYear>2023</BioYear>
             Began my Graduate Program at Linfox
             </BioSection>
+            </>)}
         </Section>
         <Section delay={0.3}>
             <Heading as="h3" variant="section-title">
