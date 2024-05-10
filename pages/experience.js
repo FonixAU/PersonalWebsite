@@ -1,5 +1,5 @@
 import React from 'react'; // Import useState from React
-import { Container, Heading, SimpleGrid, Divider, Progress } from '@chakra-ui/react';
+import { Container, Heading, SimpleGrid, Divider} from '@chakra-ui/react';
 import Section from '../components/section';
 import Layout from '../components/layouts/article';
 import { ExperienceGridItem } from '../components/grid-item';
