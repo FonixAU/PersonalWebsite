@@ -13,7 +13,8 @@ import {
     // ListItem,
     //useColorModeValue 
 } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon , ChevronDownIcon } from '@chakra-ui/icons'
+
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
@@ -47,11 +48,11 @@ const Page = () =>{
                 align="center"
                 >
                 <Image
-                borderColor="whiteAlpha.800" 
-                borderWidth={2}
-                borderStyle="solid"
+                // borderColor="whiteAlpha.800" 
+                // borderWidth={2}
+                // borderStyle="solid"
                 maxWidth="100px"
-                display="inline-block"
+                // display="inline-block"
                 borderRadius="full"
                 src="/images/me.gif"
                 alt="Profile Image"
@@ -78,9 +79,33 @@ const Page = () =>{
             </NextLink>
         </Box>
         </Section>
+        <Section delay={0.3}>
+            <Heading as="h3" variant="section-title">
+            Find me here
+            </Heading>
+            <SimpleGrid columns={[1,2,2]} gap={6}> 
+                <Link href="https://www.linkedin.com/in/felipemolinariortiz/" target="_blank">
+                    <Button variant="ghost" 
+                    colorScheme="purple" 
+                    leftIcon={<Icon as={IoLogoLinkedin}/>}>
+                        @fmolinariortiz
+                    </Button>
+                </Link>
+                <Link href="https://github.com/FonixAU" target="_blank">
+                    <Button variant="ghost" 
+                    colorScheme="purple" 
+                    leftIcon={<Icon as={IoLogoGithub}/>}>
+                        @FonxiAU
+                    </Button>
+                </Link>
+            </SimpleGrid>
+        </Section>
         <Section delay={0.2}>
             <Heading as="h3" variant="section-title" onClick={toggleExpansion} style={{ cursor: 'pointer' }}>
-                Biography
+                Biography {isExpanded ? 
+                <ChevronDownIcon/>
+                :
+                <ChevronRightIcon/>}
             </Heading>
             {isExpanded &&(
             <>
@@ -107,27 +132,6 @@ const Page = () =>{
             Began my Graduate Program at Linfox
             </BioSection>
             </>)}
-        </Section>
-        <Section delay={0.3}>
-            <Heading as="h3" variant="section-title">
-            Find me here
-            </Heading>
-            <SimpleGrid columns={[1,2,2]} gap={6}> 
-                <Link href="https://www.linkedin.com/in/felipemolinariortiz/" target="_blank">
-                    <Button variant="ghost" 
-                    colorScheme="purple" 
-                    leftIcon={<Icon as={IoLogoLinkedin}/>}>
-                        @fmolinariortiz
-                    </Button>
-                </Link>
-                <Link href="https://github.com/FonixAU" target="_blank">
-                    <Button variant="ghost" 
-                    colorScheme="purple" 
-                    leftIcon={<Icon as={IoLogoGithub}/>}>
-                        @FonxiAU
-                    </Button>
-                </Link>
-            </SimpleGrid>
         </Section>
         </Container>
         </Layout>
