@@ -25,26 +25,28 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
 .slice(i, i + hexagonsPerRow)
       : i % (hexagonsPerRow * 2) === 0
       ? honeycombs.slice(i - 1, i + hexagonsPerRow)
-      : honeycombs.slice(i - 1, i - 1 + hexagonsPerRow);
+      : honeycombs.slice(i, i + hexagonsPerRow);
   const rowStyles =
     hexagonsPerRow - rowHoneycombs.length > 0
       ? rowHoneycombs.length % 2 === 0 ?
+      //Alignment For Stragglers Based On Size (Even Or Odd)
       {
         maxHeight: '60.92px',
         display: 'flex',
         justifyContent: 'center',
-        paddingLeft: '16%'
       } :
       {
         maxHeight: '60.92px',
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        paddingRight: '16%'
       }
       :
+      //Natural Alignment Through Flex Center
       {
         maxHeight: '60.92px',
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
       }
 
     rows.push(
@@ -58,11 +60,9 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
             height={'100%'}
           />
         ))}
-        <p>{i}</p>
       </div>
     );
   }
-
   return <div style={gridStyles}>{rows}</div>;
 };
 
