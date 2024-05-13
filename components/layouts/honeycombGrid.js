@@ -62,8 +62,6 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
             maxWidth={maxHeight}
           />
           ))}
-
-          <p>{paddingVal}</p>
       </div>
     );
   }
