@@ -15,36 +15,35 @@ const HoneycombGrid = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  const hexagonsPerRow = 6;
-  const rows = [];
-
-  for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
-    const numHexagonsInRow = i % (hexagonsPerRow * 2) === 0 ? hexagonsPerRow - 1 : hexagonsPerRow;
-    const rowHoneycombs =
+var hexagonsPerRow = 5; 
+const rows = [];
+for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
+  hexagonsPerRow = i % 11 === 0 ? 5 : 6;
+  const rowHoneycombs =
     i === 0
-      ? honeycombs.slice(i, i + numHexagonsInRow)
+      ? honeycombs
+.slice(i, i + hexagonsPerRow)
       : i % (hexagonsPerRow * 2) === 0
-      ? honeycombs.slice(i - 1, i + numHexagonsInRow)
-      : honeycombs.slice(i - 1, i - 1 + numHexagonsInRow);
-     
-    const rowStyles =
-    numHexagonsInRow - rowHoneycombs.length > 0
-      ? rowHoneycombs.length % 2 === 0 ? 
+      ? honeycombs.slice(i - 1, i + hexagonsPerRow)
+      : honeycombs.slice(i - 1, i - 1 + hexagonsPerRow);
+  const rowStyles =
+    hexagonsPerRow - rowHoneycombs.length > 0
+      ? rowHoneycombs.length % 2 === 0 ?
       {
-        maxHeight: '60.92px', 
-        display: 'flex', 
+        maxHeight: '60.92px',
+        display: 'flex',
         justifyContent: 'center',
         paddingLeft: '16%'
       } :
       {
-        maxHeight: '60.92px', 
-        display: 'flex', 
+        maxHeight: '60.92px',
+        display: 'flex',
         justifyContent: 'center'
       }
       :
       {
-        maxHeight: '60.92px', 
-        display: 'flex', 
+        maxHeight: '60.92px',
+        display: 'flex',
         justifyContent: 'center'
       }
 
@@ -59,6 +58,7 @@ const HoneycombGrid = () => {
             height={'100%'}
           />
         ))}
+        <p>{i}</p>
       </div>
     );
   }
