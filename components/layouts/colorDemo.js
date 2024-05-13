@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Center, Heading, Box, Button, Divider } from '@chakra-ui/react';
-import { getColorSimple, getStackColour } from './stackColor'; // Import your image color processing module
+import { getStackColour } from './stackColor'; // Import your image color processing module
 
 import ImageColorRender from '../imageColorRendering';
 
