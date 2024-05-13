@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { Center, Heading, Box, Button, Divider } from '@chakra-ui/react';
-import { getStackColour } from './stackColor'; // Import your image color processing module
-import LoadingBar from '../loadingbar';
+import { getColorSimple, getStackColour } from './stackColor'; // Import your image color processing module
+
 import ImageColorRender from '../imageColorRendering';
 
 function ImageUploader() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageColorData, setImageColorData] = useState(null);
-  const [isLoading, setIsLoading] = useState(false); // Set initial loading state to false
-
   const handleImageChange = (e) => {
 
     const file = e.target.files[0];
@@ -28,10 +26,7 @@ function ImageUploader() {
           .catch((error) => {
             console.error('Error processing image:', error);
           })
-          .finally(() => {
-            setIsLoading(false);
-          });
-
+          
       };
 
       reader.readAsDataURL(file)
@@ -53,14 +48,12 @@ function ImageUploader() {
             const fileInput = document.getElementById('imageInput');
             if (fileInput) {
               fileInput.click();
-              setIsLoading(true); // Set loading state to true when an image is selected
             }             
           }}>
             Upload Image
           </Button>
         </Center>
       </Box>
-      <LoadingBar isLoading={isLoading}/>
       <input
         type="file"
         accept="image/*"
