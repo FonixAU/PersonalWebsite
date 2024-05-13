@@ -1,11 +1,12 @@
 import React from 'react';
 import Honeycomb from '../honeycomb';
 
-const HoneycombGrid = () => {
+const HoneycombGrid = ({maxHeight, evenRows, oddRows, paddingVal}) => {
   const gridStyles = {
     display: 'grid',
     justifyContent: 'center',
   };
+  var paddingVar = paddingVal + '%';
   const [honeycombs, setFileData] = React.useState([]);
 
   React.useEffect(() => {
@@ -15,10 +16,10 @@ const HoneycombGrid = () => {
       .catch((error) => console.error(error));
   }, []);
 
-var hexagonsPerRow = 5; 
+var hexagonsPerRow = evenRows; 
 const rows = [];
 for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
-  hexagonsPerRow = i % 11 === 0 ? 5 : 6;
+  hexagonsPerRow = i % (evenRows + oddRows) === 0 ? evenRows : oddRows;
   const rowHoneycombs =
     i === 0
       ? honeycombs
@@ -31,20 +32,20 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
       ? rowHoneycombs.length % 2 === 0 ?
       //Alignment For Stragglers Based On Size (Even Or Odd)
       {
-        maxHeight: '60.92px',
+        maxHeight: maxHeight,
         display: 'flex',
         justifyContent: 'center',
       } :
       {
-        maxHeight: '60.92px',
+        maxHeight: maxHeight,
         display: 'flex',
         justifyContent: 'center',
-        paddingRight: '16%'
+        paddingRight: paddingVar,
       }
       :
       //Natural Alignment Through Flex Center
       {
-        maxHeight: '60.92px',
+        maxHeight: maxHeight,
         display: 'flex',
         justifyContent: 'center',
       }
@@ -58,8 +59,11 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
             alt={honeycomb.alt}
             width={'auto'}
             height={'100%'}
+            maxWidth={maxHeight}
           />
-        ))}
+          ))}
+
+          <p>{paddingVal}</p>
       </div>
     );
   }

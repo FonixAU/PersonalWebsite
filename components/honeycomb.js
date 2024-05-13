@@ -1,7 +1,7 @@
 import React, {useEffect , useState} from 'react';
 import Image from 'next/image';
 import { getColorSimple } from './layouts/stackColor';
-const Honeycomb = ({ imageUrl, alt, width, height }) => {
+const Honeycomb = ({ imageUrl, alt, width, height ,maxWidth}) => {
     const [HexColor, setHexColor] = useState('');
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Honeycomb = ({ imageUrl, alt, width, height }) => {
   const hexagonStyles = {
     hexagon: {
       width: width,
-      maxWidth: '60.92px',
+      maxWidth: maxWidth,
       height: height,
       position: 'relative',
       margin: '0 10px',
