@@ -22,6 +22,11 @@ const Works = () => {
                 NPM package for analysing and returning image color distribution
                 </WorkGridItem>
             </Section>
+            <Section>
+                <WorkGridItem id="hexagonpattern" title="Dynamic Hexagon Pattern Generator" thumbnail={npmImage}>
+                NPM package that allows you to generate dynamic hexagon patterns from a folder with images
+                </WorkGridItem>
+            </Section>
             </SimpleGrid>
             <Section>
                 <Divider/>
