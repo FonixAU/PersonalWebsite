@@ -38,7 +38,7 @@ const HexagonPatternGenerator = () => {
                         </span>
                     </ListItem>
                     </List>
-                    //Hexagon Demo Here
+                    Hexagon Demo Here
             </Container>
         </Layout>
     )
