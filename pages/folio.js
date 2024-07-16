@@ -4,6 +4,7 @@ import Layout from '../components/layouts/article'
 import { WorkGridItem } from '../components/grid-item'
 import zaniteeImage from '../public/images/folio/zaniteelogo.png'
 import npmImage from '../public/images/folio/npm.png'
+import discImage from '../public/images/folio/discordlogo.jpg'
 const Works = () => {
     return(
         <Layout>
@@ -20,6 +21,11 @@ const Works = () => {
             <Section>
                 <WorkGridItem id="colorpicker" title="Image Path Color Picker" thumbnail={npmImage}>
                 NPM package for analysing and returning image color distribution
+                </WorkGridItem>
+            </Section>
+            <Section>
+                <WorkGridItem id="nominatebot" title="'Nominate' Discord Bot" thumbnail={discImage}>
+                A discord bot that allows a server hierarchy to self regulate through a democratic system
                 </WorkGridItem>
             </Section>
             <Section>
