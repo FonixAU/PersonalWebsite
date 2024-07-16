@@ -1,5 +1,5 @@
-import { Container, Badge, Link, List, ListItem} from '@chakra-ui/react'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { Container, Badge, List, ListItem} from '@chakra-ui/react'
+// import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, FolioImage, Meta} from '../../components/folioTemplate'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
