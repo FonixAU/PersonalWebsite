@@ -16,7 +16,11 @@ const Nominate = () => {
                 self regulate, but adding role promotion pathways to certain roles,
                 allowing them to be earned via merit. This is done via a polling system
                 where users may nominate other users for certain roles, and others may vote
-                and discuss on the outcome
+                and discuss on the outcome.
+                </P>
+                <P>
+                Over time I have also updated it to support other features commonly found in
+                industry standard bots such as reaction roles and event threading to support the needs of my server.
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>
@@ -32,6 +36,7 @@ const Nominate = () => {
                         </span>
                     </ListItem>
                     </List>
+                    <FolioImage src="\images\folio\nominateSS.png" alt="Nominate Example"/>
                     <FolioImage src="\images\folio\nominate.png" alt="Nominate"/>
             </Container>
         </Layout>
