@@ -5,6 +5,7 @@ import { WorkGridItem } from '../components/grid-item'
 import zaniteeImage from '../public/images/folio/zaniteelogo.png'
 import npmImage from '../public/images/folio/npm.png'
 import discImage from '../public/images/folio/discordlogo.jpg'
+import folioImage from '../public/images/folio/portfolioss.png'
 const Works = () => {
     return(
         <Layout>
@@ -31,6 +32,11 @@ const Works = () => {
             <Section>
                 <WorkGridItem id="hexagonpattern" title="Dynamic Hexagon Pattern Generator" thumbnail={npmImage}>
                 NPM package that allows you to generate dynamic hexagon patterns from a folder with images
+                </WorkGridItem>
+            </Section>
+            <Section>
+                <WorkGridItem id="portfolio" title="Portfolio Website" thumbnail={folioImage}>
+                Behind the scenes of the website you're looking at!
                 </WorkGridItem>
             </Section>
             </SimpleGrid>

@@ -9,7 +9,7 @@ const Linfox = () => {
         <Layout title="Linfox">
             <Container>
                 <Title>
-                Linfox <Badge>2021</Badge>
+                Linfox <Badge>2023</Badge>
                 </Title>
                 <List>
                 <ListItem>
