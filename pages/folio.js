@@ -36,7 +36,7 @@ const Works = () => {
             </Section>
             <Section>
                 <WorkGridItem id="portfolio" title="Portfolio Website" thumbnail={folioImage}>
-                Behind the scenes of the website you're looking at!
+                Behind the scenes of the website you&apos;re looking at!
                 </WorkGridItem>
             </Section>
             </SimpleGrid>

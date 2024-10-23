@@ -69,6 +69,12 @@ const Navbar = props => {
                 <LinkItem href="/experience" path={path}>
                     Experience
                 </LinkItem>
+                <LinkItem href="/contact" path={path}>
+                    Contact
+                </LinkItem>
+                <LinkItem href="https://github.com/FonixAU" path={path}>
+                    Github
+                </LinkItem>
                 </Stack>
                 
             <Box flex={1} align="right">
@@ -83,14 +89,14 @@ const Navbar = props => {
                         aria-label="Options"
                      />
                 <MenuList>
-                <NextLink href="/" passHref legacyBehavior>
-                    <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
                 <NextLink href="/folio" passHref legacyBehavior>
                     <MenuItem as={Link}>Portfolio</MenuItem>
                 </NextLink>
                 <NextLink href="/experience" passHref legacyBehavior>
                     <MenuItem as={Link}>Experience</MenuItem>
+                </NextLink>
+                <NextLink href="/contact" passHref legacyBehavior>
+                    <MenuItem as={Link}>Contact</MenuItem>
                 </NextLink>
                 <NextLink href='https://github.com/FonixAU' target="_blank" passHref legacyBehavior>
                     <MenuItem as={Link}>Github</MenuItem>

@@ -1,10 +1,10 @@
 import { Container, Badge, List, ListItem} from '@chakra-ui/react'
 // import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, FolioImage, Meta} from '../../components/folioTemplate'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
+import { Title, FolioImage, Meta} from '../../components/folioTemplate'
 
-const Nominate = () => {
+const Portfolio = () => {
     return (
         <Layout title="portfolio">
             <Container>
@@ -20,6 +20,14 @@ const Nominate = () => {
                 The hexagon pattern as an example is fully automatic. I made it so all I have to do is add an image
                 to a folder, and it will adapt itself.
                 </P>
+                <P>
+                Most of the site uses custom components I made so that I can easily customise and re-use them
+                to populate the site.
+                </P>
+                <P>
+                I&apos;ve taken up doing most of my solo work on google&apos;s IDX platform, I love the flexibility of
+                picking up where I left off from literally anywhere.
+                </P>
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Platform</Meta>
@@ -34,10 +42,10 @@ const Nominate = () => {
                         </span>
                     </ListItem>
                     </List>
-                    <FolioImage src="\images\folio\nominateSS.png" alt="Nominate Example"/>
-                    <FolioImage src="\images\folio\nominate.png" alt="Nominate"/>
+                    <FolioImage src="\images\folio\BTS.png" alt="Portfolio"/>
+                    <FolioImage src="\images\folio\portfolioss.png" alt="Portfolio Example"/>
             </Container>
         </Layout>
     )
 }
-export default Nominate
+export default Portfolio
