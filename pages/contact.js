@@ -1,68 +1,46 @@
 import { Container, Heading, Input, Textarea, Divider, Button, useToast } from '@chakra-ui/react'
-import { useState } from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
+const SERVICE = process.env.EMAILJS_SERVICE
+const TEMPLATE = process.env.EMAILJS_TEMPLATE
+const EMAILJS_PK = process.env.EMAILJS_PK
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const toast = useToast();
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
+        const form = useRef();
+        const toast = useToast();
+        const sendEmail = (e) => {
+          e.preventDefault();
         
-        try {
-            // Replace these with your EmailJS details
-            const response = await emailjs.send(
-                'YOUR_SERVICE_ID',
-                'YOUR_TEMPLATE_ID',
-                {
-                    from_name: formData.name,
-                    from_email: formData.email,
-                    subject: formData.subject,
-                    message: formData.message,
-                    to_email: 'your-email@example.com', // Replace with your email
-                },
-                'YOUR_PUBLIC_KEY'
-            );
-
-            if (response.status === 200) {
+        emailjs
+          .sendForm(SERVICE, TEMPLATE, form.current, {
+            publicKey:EMAILJS_PK,
+          })
+          .then(
+            () => {
                 toast({
                     title: 'Message sent!',
                     description: 'Thank you for your message. I will get back to you soon.',
                     status: 'success',
+                    duration: 3000,
+                    isClosable: true,
+                });
+              console.log('Message Sent');
+            },
+            (error) => {
+                toast({
+                    title: 'Error',
+                    description: 'Failed to send message. Please try again.',
+                    status: 'error',
                     duration: 5000,
                     isClosable: true,
                 });
-                setFormData({ name: '', email: '', subject: '', message: '' });
-            }
-        } catch (error) {
-            toast({
-                title: 'Error',
-                description: 'Failed to send message. Please try again.',
-                status: 'error',
-                duration: 5000,
-                isClosable: true,
-            });
-        }
-        
-        setIsSubmitting(false);
-    };
-
+              console.log('Message Failed', error.text);
+            },
+          );
+      };
     return (
         <Layout>
             <Container>
@@ -71,11 +49,10 @@ const Contact = () => {
                 </Heading>
                 <Divider mb={2}/>
                 <Section>
-                    <form onSubmit={handleSubmit}>
+                    <form ref={form} onSubmit={sendEmail}>
                         <Input
                             name="name"
-                            value={formData.name}
-                            onChange={handleChange}
+                            type="text"
                             mb={2}
                             bgColor='Background'
                             placeholder='Name'
@@ -84,8 +61,6 @@ const Contact = () => {
                         <Input
                             name="email"
                             type="email"
-                            value={formData.email}
-                            onChange={handleChange}
                             mb={2}
                             bgColor='Background'
                             placeholder='Email Address'
@@ -93,8 +68,7 @@ const Contact = () => {
                         />
                         <Input
                             name="subject"
-                            value={formData.subject}
-                            onChange={handleChange}
+                            type="text"
                             mb={2}
                             bgColor='Background'
                             placeholder='Subject'
@@ -102,8 +76,6 @@ const Contact = () => {
                         />
                         <Textarea
                             name="message"
-                            value={formData.message}
-                            onChange={handleChange}
                             mb={2}
                             bgColor='Background'
                             placeholder='Tell me anything :)'
@@ -111,8 +83,6 @@ const Contact = () => {
                         />
                         <Button
                             type="submit"
-                            isLoading={isSubmitting}
-                            loadingText="Sending"
                         >
                             Submit
                         </Button>
