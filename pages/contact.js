@@ -50,7 +50,7 @@ const Contact = () => {
                 <Section>
                     <form ref={form} onSubmit={sendEmail}>
                         <Input
-                            name="user_name"
+                            name="name"
                             type="text"
                             mb={2}
                             bgColor='Background'
@@ -58,7 +58,7 @@ const Contact = () => {
                             required
                         />
                         <Input
-                            name="user_email"
+                            name="email"
                             type="email"
                             mb={2}
                             bgColor='Background'
