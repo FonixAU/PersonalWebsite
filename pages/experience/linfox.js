@@ -15,7 +15,7 @@ const Linfox = () => {
                 <ListItem>
                 <P>
                 At Linfox, I participated in their 18 month Graduate Program.
-                This program gave the opportunity to work on 6 different areas of the business and complete
+                This program gave the opportunity to work on 6 different areas of the business and completed
                 an ITIL Foundations certification. 
                 </P>
                 <P>

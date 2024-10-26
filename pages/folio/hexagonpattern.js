@@ -1,11 +1,12 @@
-import { Container, Badge, Link, List, ListItem} from '@chakra-ui/react'
+import { Container, Badge, Link, List, ListItem, useBreakpointValue, Divider} from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, Meta} from '../../components/folioTemplate'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
+import HoneycombGrid from '../../components/layouts/honeycombGrid';
 
 const HexagonPatternGenerator = () => {
-
+    const isMobile = useBreakpointValue({ base: true, sm: false});
     return (
         <Layout title="HexagonPatternGenerator">
             <Container>
@@ -37,7 +38,12 @@ const HexagonPatternGenerator = () => {
                         </span>
                     </ListItem>
                     </List>
-                    Hexagon Demo Here
+                    <Divider mt={3} mb={4}/>
+                    {isMobile ? (
+        <HoneycombGrid maxHeight={'60.92px'} evenRows={3} oddRows={4} paddingVal={(3*2)*4}/>
+        ) : (
+        <HoneycombGrid maxHeight={'60.92px'} evenRows={5} oddRows={6} paddingVal={5*2 + 6}/>
+        )}
             </Container>
         </Layout>
     )
