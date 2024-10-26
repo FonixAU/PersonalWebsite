@@ -3,12 +3,11 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Section from '../components/section'
 import Layout from '../components/layouts/article'
-const SERVICE = process.env.EMAILJS_SERVICE
-const TEMPLATE = process.env.EMAILJS_TEMPLATE
-const EMAILJS_PK = process.env.EMAILJS_PK
+const SERVICE = process.env.NEXT_PUBLIC_EMAILJS_SERVICE
+const TEMPLATE = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE
+const EMAILJS_PK = process.env.NEXT_PUBLIC_EMAILJS_PK
 
 const Contact = () => {
-
         const form = useRef();
         const toast = useToast();
         const sendEmail = (e) => {
@@ -22,7 +21,7 @@ const Contact = () => {
             () => {
                 toast({
                     title: 'Message sent!',
-                    description: 'Thank you for your message. I will get back to you soon.',
+                    description: 'Thank you for reaching out. I will get back to you as soon as possible.',
                     status: 'success',
                     duration: 3000,
                     isClosable: true,
@@ -37,7 +36,7 @@ const Contact = () => {
                     duration: 5000,
                     isClosable: true,
                 });
-              console.log('Message Failed', error.text);
+              console.log('Message Failed', error);
             },
           );
       };
@@ -51,7 +50,7 @@ const Contact = () => {
                 <Section>
                     <form ref={form} onSubmit={sendEmail}>
                         <Input
-                            name="name"
+                            name="user_name"
                             type="text"
                             mb={2}
                             bgColor='Background'
@@ -59,7 +58,7 @@ const Contact = () => {
                             required
                         />
                         <Input
-                            name="email"
+                            name="user_email"
                             type="email"
                             mb={2}
                             bgColor='Background'
