@@ -28,8 +28,9 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
       ? honeycombs.slice(i - 1, i + hexagonsPerRow)
       : honeycombs.slice(i, i + hexagonsPerRow);
   const rowStyles =
-    hexagonsPerRow - rowHoneycombs.length > 0
-      ? rowHoneycombs.length % 2 === 0 ?
+    // hexagonsPerRow - rowHoneycombs.length > 0
+    //   ? 
+      rowHoneycombs.length % 2 === 0 ?
       //Alignment For Stragglers Based On Size (Even Or Odd)
       {
         maxHeight: maxHeight,
@@ -42,13 +43,13 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
         justifyContent: 'center',
         paddingRight: paddingVar,
       }
-      :
-      //Natural Alignment Through Flex Center
-      {
-        maxHeight: maxHeight,
-        display: 'flex',
-        justifyContent: 'center',
-      }
+      // :
+      // //Natural Alignment Through Flex Center
+      // {
+      //   maxHeight: maxHeight,
+      //   display: 'flex',
+      //   justifyContent: 'center',
+      // }
 
     rows.push(
       <div key={`row-${i}`} style={rowStyles}>
