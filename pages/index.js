@@ -5,7 +5,7 @@ import {
     Button,
     Box, 
     Heading, 
-    Image, 
+    // Image, 
     Link,
     Icon,
     SimpleGrid
