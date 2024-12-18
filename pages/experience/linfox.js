@@ -55,13 +55,14 @@ const Linfox = () => {
                         <Meta>Technology</Meta>
                         <span>
                         SAP EWM & ECC, MTData, Service Now, Power BI, DBT, Airflow, 
-                        Snowflake, Fivetran, Terraform, WebMethods, Docker, Postman
+                        Snowflake, Fivetran, Terraform, WebMethods, Docker, Postman,
+                        VMWare Suite, Azure Cloud Suite, Cloud & On-Prem AD, AWS, Ansible
                         </span>
                     </ListItem>
                     <ListItem>
                         <Meta>Languages</Meta>
                         <span>
-                        Python, SQL, Jinja, ABAP, Javascript, Dax
+                        Python, SQL, Jinja, ABAP, Javascript, DAX, Powershell
                         </span>
                     </ListItem>
                     </List>
