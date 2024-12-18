@@ -36,13 +36,12 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
         maxHeight: maxHeight,
         display: 'flex',
         justifyContent: 'center',
-        paddingRight: paddingVar,
       } :
       {
         maxHeight: maxHeight,
         display: 'flex',
         justifyContent: 'center',
-
+        paddingRight: paddingVar,
       }
       :
       //Natural Alignment Through Flex Center
