@@ -6,8 +6,7 @@ const HoneycombGrid = ({maxHeight, evenRows, oddRows, paddingVal}) => {
     display: 'grid',
     justifyContent: 'center',
   };
-  var paddingVar = paddingVal + '
-  %';
+  var paddingVar = paddingVal + '%';
   const [honeycombs, setFileData] = React.useState([]);
 
   React.useEffect(() => {
