@@ -43,14 +43,20 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
         justifyContent: 'center',
         paddingRight: paddingVar,
       }
-      :
+      : rowHoneycombs.length % 2 === 0 ?
       //Natural Alignment Through Flex Center
       {
         maxHeight: maxHeight,
         display: 'flex',
         justifyContent: 'center',
+        paddingRight: paddingVar,
       }
-
+      :
+      {
+        maxHeight: maxHeight,
+        display: 'flex',
+        justifyContent: 'center',
+      }
     rows.push(
       <div key={`row-${i}`} style={rowStyles}>
         {rowHoneycombs.map((honeycomb, index) => (
