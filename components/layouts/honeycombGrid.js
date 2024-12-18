@@ -48,14 +48,14 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
       {
         maxHeight: maxHeight,
         display: 'flex',
-        justifyContent: 'center',
-        paddingRight: paddingVar,
+        justifyContent: 'center'
       }
       :
       {
         maxHeight: maxHeight,
         display: 'flex',
         justifyContent: 'center',
+        paddingRight: paddingVar,
       }
     rows.push(
       <div key={`row-${i}`} style={rowStyles}>
