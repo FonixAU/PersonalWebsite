@@ -34,6 +34,7 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
     display: 'flex',
     justifyContent: 'center'
   }
+  console.log(paddingVar);
     // hexagonsPerRow - rowHoneycombs.length > 0
     //   ? 
     //   rowHoneycombs.length % 2 === 0 ?
