@@ -27,29 +27,35 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
       : i % (hexagonsPerRow * 2) === 0
       ? honeycombs.slice(i - 1, i + hexagonsPerRow)
       : honeycombs.slice(i, i + hexagonsPerRow);
-  const rowStyles =
-    hexagonsPerRow - rowHoneycombs.length > 0
-      ? 
-      rowHoneycombs.length % 2 === 0 ?
-      //Alignment For Stragglers Based On Size (Even Or Odd)
-      {
-        maxHeight: maxHeight,
-        display: 'flex',
-        justifyContent: 'center',
-      } :
-      {
-        maxHeight: maxHeight,
-        display: 'flex',
-        justifyContent: 'center',
-        paddingRight: paddingVar,
-      }
-      :
-      //Natural Alignment Through Flex Center
-      {
-        maxHeight: maxHeight,
-        display: 'flex',
-        justifyContent: 'center'
-      }
+  const rowStyles = 
+  //crazy trial: Raw doggin it
+  {
+    maxHeight: maxHeight,
+    display: 'flex',
+    justifyContent: 'center'
+  }
+    // hexagonsPerRow - rowHoneycombs.length > 0
+    //   ? 
+    //   rowHoneycombs.length % 2 === 0 ?
+    //   //Alignment For Stragglers Based On Size (Even Or Odd)
+    //   {
+    //     maxHeight: maxHeight,
+    //     display: 'flex',
+    //     justifyContent: 'center',
+    //   } :
+    //   {
+    //     maxHeight: maxHeight,
+    //     display: 'flex',
+    //     justifyContent: 'center',
+    //     paddingRight: paddingVar,
+    //   }
+    //   :
+    //   //Natural Alignment Through Flex Center
+    //   {
+    //     maxHeight: maxHeight,
+    //     display: 'flex',
+    //     justifyContent: 'center'
+    //   }
     rows.push(
       <div key={`row-${i}`} style={rowStyles}>
         {rowHoneycombs.map((honeycomb, index) => (
