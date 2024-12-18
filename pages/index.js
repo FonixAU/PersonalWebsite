@@ -41,7 +41,7 @@ const Page = () =>{
                     </Heading>
                     <p>IT Graduate ( Designer / Developer )</p>
                 </Box>
-                {/* <Box
+                <Box
                 flexShrink={0}
                 mt={{base: 4, md: 0}}
                 ml={{md: 6}}
@@ -57,7 +57,7 @@ const Page = () =>{
                 src="/images/me.gif"
                 alt="Profile Image"
                 />
-                </Box> */}
+                </Box>
             </Box>
         <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
