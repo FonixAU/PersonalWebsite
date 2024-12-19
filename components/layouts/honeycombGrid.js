@@ -30,13 +30,14 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
   const rowStyles =
     hexagonsPerRow - rowHoneycombs.length > 0
       ? 
-      rowHoneycombs.length % 2 === 0 ?
-      //Alignment For Stragglers Based On Size (Even Or Odd)
-      {
-        maxHeight: maxHeight,
-        display: 'flex',
-        justifyContent: 'center',
-      } :
+      // rowHoneycombs.length % 2 === 0 ?
+      // //Alignment For Stragglers Based On Size (Even Or Odd)
+      // {
+      //   maxHeight: maxHeight,
+      //   display: 'flex',
+      //   justifyContent: 'center',
+      //   paddingRight: paddingVar,
+      // } :
       {
         maxHeight: maxHeight,
         display: 'flex',
