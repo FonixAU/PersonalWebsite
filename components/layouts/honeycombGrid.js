@@ -1,12 +1,12 @@
 import React from 'react';
 import Honeycomb from '../honeycomb';
 
-const HoneycombGrid = ({maxHeight, evenRows, oddRows, paddingVal}) => {
+const HoneycombGrid = ({ maxHeight, evenRows, oddRows, paddingVal }) => {
   const gridStyles = {
     display: 'grid',
     justifyContent: 'center',
   };
-  var paddingVar = paddingVal + '%';
+  const paddingVar = paddingVal + '%';
   const [honeycombs, setFileData] = React.useState([]);
 
   React.useEffect(() => {
@@ -16,43 +16,59 @@ const HoneycombGrid = ({maxHeight, evenRows, oddRows, paddingVal}) => {
       .catch((error) => console.error(error));
   }, []);
 
-var hexagonsPerRow = evenRows; 
-const rows = [];
-for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
-  hexagonsPerRow = i % (evenRows + oddRows) === 0 ? evenRows : oddRows;
-  const rowHoneycombs =
-    i === 0
-      ? honeycombs
-.slice(i, i + hexagonsPerRow)
-      : i % (hexagonsPerRow * 2) === 0
-      ? honeycombs.slice(i - 1, i + hexagonsPerRow)
-      : honeycombs.slice(i, i + hexagonsPerRow);
-  const rowStyles =
-    hexagonsPerRow - rowHoneycombs.length > 0
-      ? 
-      // rowHoneycombs.length % 2 === 0 ?
-      // //Alignment For Stragglers Based On Size (Even Or Odd)
-      // {
-      //   maxHeight: maxHeight,
-      //   display: 'flex',
-      //   justifyContent: 'center',
-      //   paddingRight: paddingVar,
-      // } :
-      {
-        maxHeight: maxHeight,
-        display: 'flex',
-        justifyContent: 'center',
-        paddingRight: paddingVar,
-      }
-      :
-      //Natural Alignment Through Flex Center
-      {
-        maxHeight: maxHeight,
-        display: 'flex',
-        justifyContent: 'center'
-      }
+  let count = 0;
+  let hexagonsPerRow = evenRows; // Starting with evenRows
+  const rows = [];
+
+  while (count < honeycombs.length) {
+    const rowHoneycombs = honeycombs.slice(count, count + hexagonsPerRow);
+
+    const isIncomplete = hexagonsPerRow - rowHoneycombs.length > 0;
+    const isRowEven = rowHoneycombs.length % 2 === 0;
+    const isHexPerRowEven = hexagonsPerRow % 2 === 0;
+
+    const caseKey = `${isIncomplete ? 'incomplete' : 'complete'}-${isRowEven ? 'even' : 'odd'}-${isHexPerRowEven ? 'even' : 'odd'}`;
+
+    let rowStyles;
+    switch (caseKey) {
+      case 'incomplete-even-even':
+        rowStyles = {
+          maxHeight: maxHeight,
+          display: 'flex',
+          justifyContent: 'center',
+          paddingRight: paddingVar,
+        };
+        break;
+
+      case 'incomplete-odd-odd':
+        rowStyles = {
+          maxHeight: maxHeight,
+          display: 'flex',
+          justifyContent: 'center',
+        };
+        break;
+
+      case 'incomplete-even-odd':
+      case 'incomplete-odd-even':
+        rowStyles = {
+          maxHeight: maxHeight,
+          display: 'flex',
+          justifyContent: 'center',
+          paddingLeft: paddingVar,
+        };
+        break;
+
+      default:
+        rowStyles = {
+          maxHeight: maxHeight,
+          display: 'flex',
+          justifyContent: 'center',
+        };
+        break;
+    }
+
     rows.push(
-      <div key={`row-${i}`} style={rowStyles}>
+      <div key={`row-${count}`} style={rowStyles}>
         {rowHoneycombs.map((honeycomb, index) => (
           <Honeycomb
             key={index}
@@ -62,10 +78,14 @@ for (let i = 0; i < honeycombs.length; i += hexagonsPerRow) {
             height={'100%'}
             maxWidth={maxHeight}
           />
-          ))}
+        ))}
       </div>
     );
+
+    count += hexagonsPerRow;
+    hexagonsPerRow = hexagonsPerRow === evenRows ? oddRows : evenRows;
   }
+
   return <div style={gridStyles}>{rows}</div>;
 };
 

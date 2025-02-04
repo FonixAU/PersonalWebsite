@@ -17,13 +17,7 @@ const Experiences = () => {
           Experience
         </Heading>
         <Section>
-        {isMobile ? (
-        <HoneycombGrid maxHeight={'60.92px'} evenRows={3} oddRows={4} paddingVal={(3*2)*4}/>
-        ) : (
-        <HoneycombGrid maxHeight={'60.92px'} evenRows={5} oddRows={6} paddingVal={5*2 + 6}/>
-        )}
-          <Divider mt={8} />
-          <SimpleGrid columns={[1, 1, 2]} gap={6} mt={4}>
+        <SimpleGrid columns={[1, 1, 2]} gap={6} mt={4}>
             <Section>
               <ExperienceGridItem
                 id="diversetechlab"
@@ -40,10 +34,16 @@ const Experiences = () => {
                 title="Linfox"
                 thumbnail={LinfoxImage}
               >
-                IT Graduate
+                Cloud & Platform Engineer
               </ExperienceGridItem>
             </Section>
           </SimpleGrid>
+          <Divider mb={7} />
+          {isMobile ? (
+        <HoneycombGrid maxHeight={'60.92px'} evenRows={3} oddRows={4} paddingVal={(3*2)*4}/>
+        ) : (
+        <HoneycombGrid maxHeight={'60.92px'} evenRows={5} oddRows={6} paddingVal={5*2 + 6}/>
+        )}
         </Section>
       </Container>
     </Layout>
