@@ -31,11 +31,11 @@ const Linfox = () => {
                 <>
                 <ListItem>
                 <P>
-                While I'm in the early days at my role as a Cloud & Platform Engineer,
+                While I`&apos;`m in the early days at my role as a Cloud & Platform Engineer,
                 this section may be a little light.
                 </P>
                 <P>
-                But I've been working dilligently on
+                But I`&apos;`ve been working dilligently on
                 learning the necessary skills to perform my role, on top of focusing around
                 many continuous improvement initiatives, to improve our engagement with the
                 rest of the IT function.
