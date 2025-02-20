@@ -98,7 +98,7 @@ const Linfox = () => {
                         <Meta>Teams</Meta>
                         <span>
                         Cloud  & Platforms Engineering, Warehousing, Transport Support, Operations, 
-                           Integration, Data & Analytics.
+                           Integration, Data & Analytics
                         </span>
                     </ListItem>
                     <ListItem>
