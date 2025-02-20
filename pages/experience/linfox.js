@@ -7,10 +7,14 @@ import Section from '../../components/section'
 import Layout from '../../components/layouts/article'
 
 const Linfox = () => {
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpandedPCE, setIsExpandedPCE] = useState(false);
+    const [isExpandedGrad, setIsExpandedGrad] = useState(false);
 
-    const toggleExpansion = () => {
-        setIsExpanded(!isExpanded);
+    const toggleExpansionPCE = () => {
+        setIsExpandedPCE(!isExpandedPCE);
+    };
+    const toggleExpansionGrad = () => {
+        setIsExpandedGrad(!isExpandedGrad);
     };
     return (
         <Layout title="Linfox">
@@ -20,14 +24,14 @@ const Linfox = () => {
                 </Title>
                 <List>
                 <Section delay={0.2}>
-            <Heading as="h3" variant="section-title" onClick={toggleExpansion} style={{ cursor: 'pointer' }}>
-                Cloud & Platform Engineering {isExpanded ? 
+            <Heading as="h3" variant="section-title" onClick={toggleExpansionPCE} style={{ cursor: 'pointer' }}>
+                Cloud & Platform Engineering {isExpandedPCE ? 
                 <ChevronDownIcon/>
                 :
                 <ChevronRightIcon/>}
             </Heading>
                 
-                {isExpanded &&(
+                {isExpandedPCE &&(
                 <>
                 <ListItem>
                 <P>
@@ -52,14 +56,14 @@ const Linfox = () => {
                 </>)}
                 </Section>
                 <Section delay={0.2}>
-            <Heading as="h3" variant="section-title" onClick={toggleExpansion} style={{ cursor: 'pointer' }}>
-                Graduate Program {isExpanded ? 
+            <Heading as="h3" variant="section-title" onClick={toggleExpansionGrad} style={{ cursor: 'pointer' }}>
+                Graduate Program {isExpandedGrad ? 
                 <ChevronDownIcon/>
                 :
                 <ChevronRightIcon/>}
             </Heading>
                 
-                {isExpanded &&(
+                {isExpandedGrad &&(
                 <>
                 <ListItem>
                 <P>
