@@ -8,18 +8,15 @@ const HoneycombGrid = ({ maxHeight, evenRows, oddRows, paddingVal }) => {
   };
   const paddingVar = paddingVal + '%';
   const [honeycombs, setFileData] = React.useState([]);
-  const [isLoading, setIsLoading] = React.useState(true); // New loading state
   
   React.useEffect(() => {
     fetch('/api/stack')
       .then((response) => response.json())
       .then((data) => {
-        setFileData(data);
-        setIsLoading(false); // Stop loading when data is fetched
+        setFileData(data);// Stop loading when data is fetched
       })
       .catch((error) => {
-        console.error(error);
-        setIsLoading(false); // Ensure loading stops even on error
+        console.error(error);// Ensure loading stops even on error
       });
   }, []);
   
