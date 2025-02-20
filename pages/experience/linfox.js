@@ -1,10 +1,17 @@
-import { Container, Badge, Link, List, ListItem} from '@chakra-ui/react'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { useState } from 'react';
+import { Container, Badge, Link, List, Heading, ListItem} from '@chakra-ui/react'
+import { ExternalLinkIcon, ChevronRightIcon , ChevronDownIcon } from '@chakra-ui/icons'
 import { Title, Meta} from '../../components/experienceTemplate'
 import P from '../../components/paragraph'
+import Section from '../../components/section'
 import Layout from '../../components/layouts/article'
 
 const Linfox = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const toggleExpansion = () => {
+        setIsExpanded(!isExpanded);
+    };
     return (
         <Layout title="Linfox">
             <Container>
@@ -12,6 +19,48 @@ const Linfox = () => {
                 Linfox <Badge>2023</Badge>
                 </Title>
                 <List>
+                <Section delay={0.2}>
+            <Heading as="h3" variant="section-title" onClick={toggleExpansion} style={{ cursor: 'pointer' }}>
+                Cloud & Platform Engineering {isExpanded ? 
+                <ChevronDownIcon/>
+                :
+                <ChevronRightIcon/>}
+            </Heading>
+                
+                {isExpanded &&(
+                <>
+                <ListItem>
+                <P>
+                While I'm in the early days at my role as a Cloud & Platform Engineer,
+                this section may be a little light.
+                </P>
+                <P>
+                But I've been working dilligently on
+                learning the necessary skills to perform my role, on top of focusing around
+                many continuous improvement initiatives, to improve our engagement with the
+                rest of the IT function.
+                </P>
+                </ListItem>
+                {/* <ListItem my={3}>
+                <P>
+                P1
+                </P>
+                <P>
+                P2
+                </P>
+                </ListItem> */}
+                </>)}
+                </Section>
+                <Section delay={0.2}>
+            <Heading as="h3" variant="section-title" onClick={toggleExpansion} style={{ cursor: 'pointer' }}>
+                Graduate Program {isExpanded ? 
+                <ChevronDownIcon/>
+                :
+                <ChevronRightIcon/>}
+            </Heading>
+                
+                {isExpanded &&(
+                <>
                 <ListItem>
                 <P>
                 At Linfox, I participated in their 18 month Graduate Program.
@@ -35,8 +84,9 @@ const Linfox = () => {
                 by expediting timelines, adding detail, and working closely on implementation logic and discussions.
                 </P>
                 </ListItem>
+                </>)}
+                </Section>
                 </List>
-                
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Website</Meta>
@@ -47,8 +97,8 @@ const Linfox = () => {
                     <ListItem>
                         <Meta>Teams</Meta>
                         <span>
-                           Warehousing, Transport Support, Operations, 
-                           Integration, Data & Analytics, Cloud Platforms
+                        Cloud  & Platforms Engineering, Warehousing, Transport Support, Operations, 
+                           Integration, Data & Analytics.
                         </span>
                     </ListItem>
                     <ListItem>

@@ -63,12 +63,11 @@ const Page = () =>{
         <Heading as="h3" variant="section-title">
             Currently
         </Heading>
-        <Paragraph>I am elevating my career working at Linfox under their IT graduate program so that I can utilise 
-            the experience I have gained so far in a corporate setting, and gain an abundance of new skills that I will be 
-            able to apply into anything the future holds for me. My latest professional experience has been in the creation 
-            and short term support of a web application during my internship at Diverse Tech Lab called{' '}
-            <NextLink href="/folio/zanitee" legacyBehavior>
-                <Link>Zanitee</Link>
+        <Paragraph>I am currently working at Linfox as a Cloud & Platform Engineer, so that I can gain expertise
+            in the world of infrastructure and become a more rounded IT professional. Most recently I was going
+            through the Linfox Graduate Program, experiencing everything a major enterprise IT function has to offer. Read more {' '}
+            <NextLink href="/experience/linfox" legacyBehavior>
+                <Link>here</Link>
             </NextLink>
         </Paragraph>
         <Box align="center" my={4}>

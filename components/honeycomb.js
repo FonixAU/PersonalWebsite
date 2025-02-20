@@ -9,6 +9,7 @@ const Honeycomb = ({ imageUrl, alt, width, height ,maxWidth}) => {
       getColorSimple(imageUrl)
         .then((result) => {
           const hexColor = result.rgb;
+          
           setHexColor(hexColor);
         })
         .catch((error) => {
