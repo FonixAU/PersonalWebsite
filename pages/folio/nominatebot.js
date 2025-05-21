@@ -20,7 +20,7 @@ const Nominate = () => {
                 </P>
                 <P>
                 Over time I have also updated it to support other features commonly found in
-                industry standard bots such as reaction roles and event threading to support the needs of my server.
+                industry standard bots such as reaction roles, dynamic event threading and timezone conversions to support the needs of my server.
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>
