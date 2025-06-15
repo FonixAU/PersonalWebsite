@@ -6,6 +6,8 @@ import zaniteeImage from '../public/images/folio/zaniteelogo.png'
 import npmImage from '../public/images/folio/npm.png'
 import discImage from '../public/images/folio/discordlogo.jpg'
 import folioImage from '../public/images/folio/portfolioss.png'
+import obsImage from '../public/images/folio/obslive.png'
+
 const Works = () => {
     return(
         <Layout>
@@ -36,6 +38,11 @@ const Works = () => {
             </Section>
             <Section>
                 <WorkGridItem id="portfolio" title="Portfolio Website" thumbnail={folioImage}>
+                Behind the scenes of the website you&apos;re looking at!
+                </WorkGridItem>
+            </Section>
+            <Section>
+                <WorkGridItem id="obschat" title="OBS Chat Plugin" thumbnail={obsImage}>
                 Behind the scenes of the website you&apos;re looking at!
                 </WorkGridItem>
             </Section>
