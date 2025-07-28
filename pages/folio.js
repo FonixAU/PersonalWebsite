@@ -7,6 +7,7 @@ import npmImage from '../public/images/folio/npm.png'
 import discImage from '../public/images/folio/discordlogo.jpg'
 import folioImage from '../public/images/folio/portfolioss.png'
 import obsImage from '../public/images/folio/obslive.png'
+import wedImage from '../public/images/folio/weddingMain.png'
 
 const Works = () => {
     return(
@@ -16,6 +17,11 @@ const Works = () => {
                 Portfolio
             </Heading>
             <SimpleGrid columns={[1,1,2]} gap={6}>
+            <Section>
+                <WorkGridItem id="wedding" title="Wedding" thumbnail={wedImage}>
+                Complete wedding website & invitation suite
+                </WorkGridItem>
+            </Section>
             <Section>
                 <WorkGridItem id="zanitee" title="Zanitee" thumbnail={zaniteeImage}>
                 Gift suggestion and cataloguing web application
@@ -43,7 +49,7 @@ const Works = () => {
             </Section>
             <Section>
                 <WorkGridItem id="obschat" title="OBS Chat Plugin" thumbnail={obsImage}>
-                Behind the scenes of the website you&apos;re looking at!
+                Plugin to assist with multi-streaming live chat management.
                 </WorkGridItem>
             </Section>
             </SimpleGrid>
