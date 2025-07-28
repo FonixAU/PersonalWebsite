@@ -22,13 +22,13 @@ const Wedding = () => {
                 effort to save costs and put a modern spin on the whole thing.
                 </P>
                 <P>
-                I built a simple Vercel hosted NextJS site, but leveraged Cloudinary's robust api and
+                I built a simple Vercel hosted NextJS site, but leveraged Cloudinary&apos;s robust api and
                 (most importantly) free capabilities to add a dynamic gallery to the site, so we can spice up its functionality
                 and also make sure we capture many memories without needing a whole camera crew.
                 </P>
                 <P>
-                I then used a combination of Directus' user friendly CMS capabilities as a GUI-fied data-base that even
-                my non-techie wife could use, to manage the invites and guest list. Along with handlebars' powerful templating,
+                I then used a combination of Directus&apos; user friendly CMS capabilities as a GUI-fied data-base that even
+                my non-techie wife could use, to manage the invites and guest list. Along with handlebars&apos; powerful templating,
                 where I had the freedom to pair it with any css frameworks I wanted to bring the invites to the modern age.
                 The database is hosted on fly.io where the low usage keeps costs under the $5 limit, and Render for the invites which is capable
                 of spinning up in a few seconds from idle.
