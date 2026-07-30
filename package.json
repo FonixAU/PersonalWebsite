@@ -27,11 +27,11 @@
     "framer-motion": "^10.12.9",
     "fs": "^0.0.1-security",
     "imagepathcolorpicker": "^1.0.2",
-    "next": "15.0.7",
+    "next": "15.5.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "sharp": "^0.32.6",
+    "sharp": "^0.35.0",
     "three": "^0.154.0"
   },
   "devDependencies": {
